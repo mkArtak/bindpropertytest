@@ -9,14 +9,16 @@
         <input type="hidden" asp-for="Test1" />
         <input type="hidden" asp-for="@Model.Test2" />
 
-        @if (!Model.Test1)
-        {
-            <b>Test1 Is False</b>
-        }
-        else
-        {
-            <b>Test1 Is True</b>
-        }
+        <div>
+            @if (!Model.Test1)
+            {
+                <b>Test1 Is False</b>
+            }
+            else
+            {
+                <b>Test1 Is True</b>
+            }
+        </div>
         <div class="form-group">
             <input type="submit" value="Next" class="btn btn-primary" />
         </div>

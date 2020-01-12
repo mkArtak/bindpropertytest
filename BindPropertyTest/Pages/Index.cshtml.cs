@@ -20,19 +20,23 @@ namespace BindPropertyTest.Pages
         [BindProperty]
         public bool Test2 { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
             Test1 = false;
             Test2 = false;
+
+            return Page();
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
             Console.WriteLine("Test1: {0}", Test1);
             Console.WriteLine("Test2: {0}", Test2);
 
             Test1 = !Test1;
             Test2 = !Test2;
+
+            return Page();
         }
     }
 }
