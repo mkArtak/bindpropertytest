@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Test1" />
+        <input type="hidden" asp-for="@Model.Test2" />
+
+        @if (!Model.Test1)
+        {
+            <b>Test1 Is False</b>
+        }
+        else
+        {
+            <b>Test1 Is True</b>
+        }
+        <div class="form-group">
+            <input type="submit" value="Next" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
